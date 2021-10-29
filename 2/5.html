@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Функция определяет операцию, переданную в третий параметр между двумя первыми
+   * аргументами функции.
+   * @param {number} arg1 - Первое число.
+   * @param {number} arg2 - Второе число.
+   * @param {number} operation - Операция, одна из возможных строк:
+   * "+", "-", "*", "/".
+   * @return {number} Результат операции operation над первыми двумя аргументами
+   * функции. Может вернуть NaN, если operation или первые два аргумента заданы
+   * неверно.
+   */
+
+  function mathOperation(arg1, arg2, operation) {
+    if (operation = "+") {
+        return sum(arg1, arg2);
+    }
+    else if (operation = "-") {
+        return residual(arg1, arg2);
+    }
+    else if (operation = "*") {
+        return multiplication(arg1, arg2);
+    }
+    else if (operation = "/") {
+        return division(arg1, arg2);
+    }
+    else {
+        return NaN;
+        }
+    }
+
+    console.log(mathOperation(10, 5, "*")); 
+    console.log(mathOperation(5, 3, "/")); 
+
+
+  /**
+   * Функция складывает два переданных числа.
+   * @param {number} a - Первое число для сложения в функции.
+   * @param {number} b - Второе число для сложения в функции.
+   * @return {number} В консоль выведет сумму двух чисел.
+   */
+   function sum(a, b) {
+    console.log(a + b);
+  }
+
+  /**
+   * Функция вычислит разницу переданных чисел.
+   * @param {number} a - Уменьшаемое.
+   * @param {number} b - Вычитаемое.
+   * @return {number} В консоль выведет разницу чисел.
+   */
+  function residual(a, b) {
+    if (a > b) {
+        console.log(a - b);
+    }
+    else {
+        console.log(b - a); 
+    }
+  }
+
+  /**
+   * Функция считает произведение переданных чисел.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} В консоль выведет проиведение чисел.
+   */
+  function multiplication(a, b) {
+    console.log(a * b);
+  }
+
+  /**
+   * Функция считает частное переданных чисел.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} В консоль выведет частное чисел.
+   */
+  function division(a, b) {
+    console.log(a / b);
+  }
+
+
+</script>
+</body>
+</html>
